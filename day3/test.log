@@ -1,0 +1,131 @@
+nbStr: 230
+x:11,y:0,first:7,last:12
+
+nbStr: 311
+x:15,y:0,first:11,last:16
+
+nbStr: 326
+x:21,y:0,first:17,last:22
+Below: something in "*...."
+326 is a part number
+
+nbStr: 617
+x:27,y:0,first:23,last:28
+Below: something in ".*..."
+617 is a part number
+
+nbStr: 585
+x:32,y:0,first:28,last:33
+Below: something in "..*.."
+585 is a part number
+
+nbStr: 798
+x:60,y:0,first:56,last:61
+
+nbStr: 699
+x:65,y:0,first:61,last:66
+
+nbStr: 20
+x:79,y:0,first:76,last:80
+
+nbStr: 687
+x:106,y:0,first:102,last:107
+Below: something in ".%..."
+687 is a part number
+
+nbStr: 662
+x:114,y:0,first:110,last:115
+Below: something in "..*.."
+662 is a part number
+
+nbStr: 246
+x:131,y:0,first:127,last:132
+
+Le bonus: 
+nbStr: 735
+x:3,y:1,first:0,last:4
+Current line, first letter: something in '7'
+735 is a part number
+
+nbStr: 61
+x:7,y:1,first:4,last:8
+Below: something in "...*"
+61 is a part number
+
+nbStr: 361
+x:47,y:1,first:43,last:48
+Below: something in "=...."
+361 is a part number
+
+nbStr: 171
+x:121,y:1,first:117,last:122
+Above: something in "....*"
+171 is a part number
+
+nbStr: 380
+x:127,y:1,first:123,last:128
+Below: something in "..*.."
+380 is a part number
+
+nbStr: 786
+x:138,y:1,first:134,last:138
+Below: something in "*..."
+786 is a part number
+
+Le bonus: 
+nbStr: 378
+x:20,y:2,first:16,last:21
+Above: something in ".*..."
+378 is a part number
+
+nbStr: 624
+x:24,y:2,first:20,last:25
+Above: something in "....*"
+624 is a part number
+
+nbStr: 836
+x:36,y:2,first:32,last:37
+Current line, last letter: something in '*'
+836 is a part number
+
+nbStr: 742
+x:40,y:2,first:36,last:41
+Current line, first letter: something in '*'
+742 is a part number
+
+nbStr: 322
+x:60,y:2,first:56,last:61
+
+nbStr: 195
+x:75,y:2,first:71,last:76
+
+nbStr: 634
+x:85,y:2,first:81,last:86
+Above: something in "..=.."
+634 is a part number
+
+nbStr: 422
+x:93,y:2,first:89,last:94
+
+nbStr: 893
+x:98,y:2,first:94,last:99
+Current line, last letter: something in '*'
+893 is a part number
+
+nbStr: 106
+x:102,y:2,first:98,last:103
+Current line, first letter: something in '*'
+106 is a part number
+
+nbStr: 960
+x:116,y:2,first:112,last:117
+Above: something in "*...."
+960 is a part number
+
+nbStr: 121
+x:134,y:2,first:130,last:135
+Current line, last letter: something in '*'
+121 is a part number
+
+Le bonus: 
+Result: 10665

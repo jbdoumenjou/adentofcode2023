@@ -1,0 +1,47 @@
+nbStr: 467
+x:3,y:0,first:0,last:4
+Below: something in "...*"
+467 is a part number
+
+nbStr: 114
+x:8,y:0,first:4,last:8
+
+nbStr: 35
+x:4,y:2,first:1,last:5
+Above: something in "..*."
+35 is a part number
+
+nbStr: 633
+x:9,y:2,first:5,last:9
+Below: something in ".#.."
+633 is a part number
+
+nbStr: 617
+x:4,y:4,first:0,last:5
+Current line, first letter: something in '6'
+617 is a part number
+
+nbStr: 58
+x:9,y:5,first:6,last:9
+
+nbStr: 592
+x:5,y:6,first:1,last:6
+Above: something in "....+"
+592 is a part number
+
+nbStr: 755
+x:9,y:7,first:5,last:9
+Below: something in "*..."
+755 is a part number
+
+nbStr: 664
+x:4,y:9,first:0,last:5
+Above: something in "...$."
+664 is a part number
+
+nbStr: 598
+x:8,y:9,first:4,last:8
+Above: something in ".*.."
+598 is a part number
+
+Result: 4361
