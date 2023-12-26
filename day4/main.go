@@ -8,25 +8,52 @@ import (
 	"strings"
 )
 
+// part1: 21558
+// part2: 10425665
 func main() {
-	file, err := os.Open("part1-input.txt")
-	defer file.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
-	scanner := bufio.NewScanner(file)
-
-	var result int
-	for scanner.Scan() {
-		result += score(scanner.Text())
-	}
-	fmt.Println(result)
+	entries := getEntries("part2-input.txt")
+	results := getCardsNumber(entries)
+	fmt.Println(getTotalCount(results))
 }
 
-func score(s string) int {
+func getTotalCount(results []int) int {
+	var total int
+	for _, r := range results {
+		total += r
+	}
+
+	return total
+}
+
+func getCardsNumber(entries []string) []int {
+	max := len(entries)
+	results := make([]int, max)
+
+	for i := 0; i < max; i++ {
+		nb := winingCardsNb(entries[i])
+		results[i]++
+
+		for j := i + 1; j <= i+nb && j < max; j++ {
+			results[j] += results[i]
+		}
+	}
+
+	return results
+}
+
+func score(winingCardsNb int) int {
+	if winingCardsNb == 0 {
+		return 0
+	}
+
+	return 1 << (winingCardsNb - 1)
+}
+
+func winingCardsNb(s string) int {
 	line := strings.Split(s, ":")
 	values := strings.Split(line[1], "|")
 	winning := strings.Split(values[0], " ")
+
 	hasWon := make(map[string]struct{}, len(winning))
 	for _, v := range winning {
 		if v != "" {
@@ -43,9 +70,20 @@ func score(s string) int {
 		nb++
 	}
 
-	if nb == 0 {
-		return 0
+	return nb
+}
+
+func getEntries(path string) []string {
+	file, err := os.Open(path)
+	if err != nil {
+		log.Fatal(err)
+	}
+	scanner := bufio.NewScanner(file)
+
+	var matrix []string
+	for scanner.Scan() {
+		matrix = append(matrix, scanner.Text())
 	}
 
-	return 1 << (nb - 1)
+	return matrix
 }
