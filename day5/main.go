@@ -4,19 +4,38 @@ import (
 	"bufio"
 	"fmt"
 	"log"
+	"math"
 	"os"
 	"slices"
 	"strconv"
 	"strings"
 )
 
-// part1: 21558
-// part2: 10425665
+// part1: 836040384
+// part2: 358218184 too high
+// part2: 10834440 but very slow algorithm!
 func main() {
+	//entries := getEntries("part1-example.txt")
 	entries := getEntries("part1-input.txt")
 
-	location := getNearestLocation(entries)
+	location := getNearestLocation2(entries)
 	fmt.Println("Nearest location: ", location)
+}
+
+func getNearestLocation2(entries []string) int {
+	seeds := getSeeds(entries[0])
+	mappers := getMappers(entries[2:])
+
+	nearest := math.MaxInt
+	for i := 0; i+1 < len(seeds); i += 2 {
+		for seed := seeds[i]; seed < seeds[i]+seeds[i+1]; seed++ {
+			if location := getLocation(mappers, seed); location < nearest {
+				nearest = location
+			}
+		}
+	}
+
+	return nearest
 }
 
 // part1: 836040384
