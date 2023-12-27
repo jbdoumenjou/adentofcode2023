@@ -64,3 +64,12 @@ func Test_getRaces(t *testing.T) {
 	}
 
 }
+
+func Test_getValue(t *testing.T) {
+	line := "Time:      7  15   30"
+	want := 71530
+
+	if got := getValue(line); got != want {
+		t.Errorf("getValue() = %v, want %v", got, want)
+	}
+}

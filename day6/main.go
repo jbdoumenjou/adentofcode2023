@@ -10,7 +10,29 @@ import (
 )
 
 // part1: 5133600
+// part2: 40651271
 func main() {
+	entries := getEntries("part1-input.txt")
+	r := getRace(entries)
+
+	fmt.Println(r.nbOfWaysToBeatDistance())
+}
+
+func getRace(entries []string) race {
+	return race{
+		Time:     getValue(entries[0]),
+		Distance: getValue(entries[1]),
+	}
+}
+
+func getValue(s string) int {
+	line := strings.Split(s, ":")
+	valueStr := strings.ReplaceAll(line[1], " ", "")
+
+	return toInt(valueStr)
+}
+
+func part1() {
 	entries := getEntries("part1-input.txt")
 	races := getRaces(entries)
 
